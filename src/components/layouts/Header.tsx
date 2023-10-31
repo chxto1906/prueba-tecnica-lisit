@@ -12,9 +12,9 @@ const Header = () => {
           <span className="text-xl font-semibold ml-2">Manosos SPA</span>
         </Link>
         <nav className="flex space-x-4 md:space-x-4">
-          <Link to="/" className="text-secondary">Inicio</Link>
-          <Link to="/servicios" className="text-secondary">Servicios</Link>
-          <Link to="/contacto" className="text-secondary">Contacto</Link>
+          <Link to="#" className="text-secondary">Inicio</Link>
+          <Link to="#" className="text-secondary">Servicios</Link>
+          <Link to="#" className="text-secondary">Contacto</Link>
         </nav>
       </div>
     </header>

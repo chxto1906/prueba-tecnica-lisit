@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { getResourceDetail } from '../../../services/api';
 import Loading from '../../components/Loading';
 import { Ship } from '../../../interfaces/Ships.interface';
+import { RiRocketFill } from 'react-icons/ri';
 
 const ShipDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -25,47 +26,51 @@ const ShipDetail = () => {
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-4 m-4 max-w-md mx-auto">
-      <h2 className="text-4xl font-semibold text-center mb-4">{ship.name}</h2>
+    <div className="bg-gray-100 py-8 min-h-screen">
+      <div className="container mx-auto min-h-screen">
+        <div className="bg-white rounded-lg shadow-md p-4 m-4 max-w-md mx-auto">
+          <h2 className="text-4xl font-semibold text-center mb-4 flex"><RiRocketFill />{ship.name}</h2>
 
-      <div className="border p-4 shadow-md">
-        <div className="text-xl font-semibold">Modelo:</div>
-        <div className="text-xl">{ship.model}</div>
-      </div>
-      <div className="border p-4 shadow-md">
-        <div className="text-xl font-semibold">Fabricante:</div>
-        <div className="text-xl">{ship.manufacturer}</div>
-      </div>
-      <div className="border p-4 shadow-md mb-4">
-        <div className="text-xl font-semibold">Costo en creditos:</div>
-        <div className="text-xl">{ship.cost_in_credits}</div>
-      </div>
+          <div className="border p-4 shadow-md">
+            <div className="text-xl font-semibold">Modelo:</div>
+            <div className="text-xl">{ship.model}</div>
+          </div>
+          <div className="border p-4 shadow-md">
+            <div className="text-xl font-semibold">Fabricante:</div>
+            <div className="text-xl">{ship.manufacturer}</div>
+          </div>
+          <div className="border p-4 shadow-md mb-4">
+            <div className="text-xl font-semibold">Costo en creditos:</div>
+            <div className="text-xl">{ship.cost_in_credits}</div>
+          </div>
 
-      <div className="border p-4 shadow-md mb-4">
-        <div className="text-xl font-semibold">Longitud:</div>
-        <div className="text-xl">{ship.length}</div>
-      </div>
+          <div className="border p-4 shadow-md mb-4">
+            <div className="text-xl font-semibold">Longitud:</div>
+            <div className="text-xl">{ship.length}</div>
+          </div>
 
-      <div className="border p-4 shadow-md mb-4">
-        <div className="text-xl font-semibold">Velocidad atmosférica máxima:</div>
-        <div className="text-xl">{ship.max_atmosphering_speed}</div>
-      </div>
+          <div className="border p-4 shadow-md mb-4">
+            <div className="text-xl font-semibold">Velocidad atmosférica máxima:</div>
+            <div className="text-xl">{ship.max_atmosphering_speed}</div>
+          </div>
 
-      <div className="border p-4 shadow-md">
-        <div className="text-xl font-semibold">Tripulacion:</div>
-        <div className="text-xl">{ship.crew}</div>
-      </div>
+          <div className="border p-4 shadow-md">
+            <div className="text-xl font-semibold">Tripulacion:</div>
+            <div className="text-xl">{ship.crew}</div>
+          </div>
 
-      <div className="border p-4 shadow-md">
-        <div className="text-xl font-semibold">Pasajeros:</div>
-        <div className="text-xl">{ship.passengers}</div>
-      </div>
+          <div className="border p-4 shadow-md">
+            <div className="text-xl font-semibold">Pasajeros:</div>
+            <div className="text-xl">{ship.passengers}</div>
+          </div>
 
-      <div className="border p-4 shadow-md">
-        <div className="text-xl font-semibold">Capacidad de carga:</div>
-        <div className="text-xl">{ship.passengers}</div>
+          <div className="border p-4 shadow-md">
+            <div className="text-xl font-semibold">Capacidad de carga:</div>
+            <div className="text-xl">{ship.passengers}</div>
+          </div>
+          
+        </div>
       </div>
-      
     </div>
   );
 };

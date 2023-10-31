@@ -7,6 +7,7 @@ import Loading from "../../components/Loading";
 import Pagination from "../../components/Pagination";
 import Search from "../../components/Search";
 import { Ship } from "../../../interfaces/Ships.interface";
+import { RiRocketFill } from "react-icons/ri";
 
 
 const Ships = () => {
@@ -62,7 +63,7 @@ const Ships = () => {
   return (
     <div className="bg-gray-100 py-8 min-h-screen">
       <div className="container mx-auto min-h-screen">
-        <h2 className="text-3xl font-semibold mb-4 p-2">Naves</h2>
+        <h2 className="text-4xl font-semibold mb-4 p-2 flex"><RiRocketFill />Naves</h2>
         <Search onSearch={handleSearch} />
         {loading ? 
             <Loading />

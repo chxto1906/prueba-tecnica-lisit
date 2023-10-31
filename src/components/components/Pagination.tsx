@@ -1,4 +1,5 @@
 import React from 'react';
+import {  RiArrowRightDoubleLine, RiArrowLeftDoubleFill } from 'react-icons/ri';
 
 interface PaginationProps {
   onPrevious: () => void;
@@ -15,18 +16,21 @@ const Pagination: React.FC<PaginationProps> = ({ onPrevious, onNext, hasPrevious
         disabled={!hasPrevious}
         className={`${
           hasPrevious ? 'bg-blue-500 hover:bg-blue-600' : 'bg-gray-400'
-        } text-white px-4 py-2 rounded-md`}
+        } text-white px-4 py-2 rounded-md flex`}
       >
-        Anterior
+        
+        <span><RiArrowLeftDoubleFill className='text-2xl' /></span>
+        <span>Anterior </span> 
       </button>
       <button
         onClick={onNext}
         disabled={!hasNext}
         className={`${
           hasNext ? 'bg-blue-500 hover:bg-blue-600' : 'bg-gray-400'
-        } text-white px-4 py-2 rounded-md`}
+        } text-white px-4 py-2 rounded-md flex`}
       >
-        Siguiente
+        <span>Siguiente </span> 
+        <span><RiArrowRightDoubleLine className='text-2xl' /></span>
       </button>
     </div>
   );
